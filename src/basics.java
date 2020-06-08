@@ -1,5 +1,6 @@
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 
 public class basics {
 
@@ -30,7 +31,7 @@ public class basics {
 				"  \"website\": \"http://google.com\",\n" + 
 				"  \"language\": \"French-IN\"\n" + 
 				"}").when().post("maps/api/place/add/json")
-		.then().log().all().assertThat().statusCode(200);
+		.then().log().all().assertThat().statusCode(200).body("scope", equalTo("APP"));
 	}
 
 }
