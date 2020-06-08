@@ -31,7 +31,8 @@ public class basics {
 				"  \"website\": \"http://google.com\",\n" + 
 				"  \"language\": \"French-IN\"\n" + 
 				"}").when().post("maps/api/place/add/json")
-		.then().log().all().assertThat().statusCode(200).body("scope", equalTo("APP"));
+		.then().log().all().assertThat().statusCode(200).body("scope", equalTo("APP"))
+		.header("server", "Apache/2.4.18 (Ubuntu)");
 	}
 
 }
