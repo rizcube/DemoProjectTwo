@@ -4,6 +4,8 @@ import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
+import org.testng.Assert;
+
 import files.payload;
 
 public class basics {
@@ -30,6 +32,7 @@ public class basics {
 		
 		
 		//update place
+		String newAddress = "Alame Arwah - the world of spirit";
 		given().log().all().queryParam("key", "qaclick123").queryParam("place_id", "placeId")
 		.body("{\n" + 
 				"\"place_id\":\""+placeId+"\",\n" + 
@@ -47,7 +50,9 @@ public class basics {
 		
 		JsonPath js1 = new JsonPath(getPlaceResponse);
 		String actualAddress = js1.getString("address");
-		System.out.println(actualAddress);
+		System.out.println("Actual Address: "+actualAddress);
+		Assert.assertEquals(actualAddress,  newAddress);
+		System.out.println("New Address: "+newAddress);
 		
 		
 	}
