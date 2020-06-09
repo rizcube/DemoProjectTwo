@@ -33,12 +33,17 @@ public class basics {
 		given().log().all().queryParam("key", "qaclick123").queryParam("place_id", "placeId")
 		.body("{\n" + 
 				"\"place_id\":\""+placeId+"\",\n" + 
-				"\"address\":\"Princess new address, Alame Arwah\",\n" + 
+				"\"address\":\"Alame Arwah - the world of spirit\",\n" + 
 				"\"key\":\"qaclick123\"\n" + 
 				"}")
 		.when().put("maps/api/place/update/json")
 		.then().assertThat().log().all().statusCode(200).body("msg", equalTo("Address successfully updated"));
 		
+		// get place 
+		
+		given().log().all().queryParam("key", "qaclick123").queryParam("place_id", placeId)
+		.when().get("maps/api/place/get/json")
+		.then().log().all().assertThat().statusCode(200);
 		
 		
 	}
