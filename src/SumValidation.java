@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import files.payload;
@@ -23,6 +24,7 @@ public class SumValidation {
 			System.out.println("sum is :" + sum);
 			int purchaseAmount = js.get("dashboard.purchaseAmount");
 			System.out.println(purchaseAmount);
+			Assert.assertEquals(purchaseAmount, sum);
 			
 	}
 
