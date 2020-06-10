@@ -25,7 +25,15 @@ public class ComplexJsonParse {
 		for(int i=0; i<count; i++) {
 			String courseTitles = js.get("courses["+i+"].title");
 			System.out.println(courseTitles);
+			// without wrapping it in a variable
+			System.out.println(js.getString("courses["+i+"].price").toString());
+			// wrapping in a variable
+			int price = js.getInt("courses["+i+"].price");
+			System.out.println(price);
 		}
+		
+		
+		
 		
 	}
 
