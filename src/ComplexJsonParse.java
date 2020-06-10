@@ -30,9 +30,22 @@ public class ComplexJsonParse {
 			// wrapping in a variable
 			int price = js.getInt("courses["+i+"].price");
 			System.out.println(price);
+			
+			
 		}
 		
-		
+		System.out.println("Print number of copies are sold by RPA");
+		for (int i=0; i< count; i++) 
+		{
+		String courseTitles = js.get("courses["+i+"].title");
+		if(courseTitles.equalsIgnoreCase("RPA")) 
+			{
+			// return copies sold
+			int copies = js.get("courses["+ i +"].copies");
+			System.out.println(copies);
+			break;
+			}
+		}
 		
 		
 	}
