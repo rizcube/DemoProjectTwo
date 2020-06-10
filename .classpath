@@ -141,5 +141,6 @@
 	<classpathentry kind="lib" path="/Users/rizcube/Desktop/Programs_Downloaded_And_Installed/JARS/xml-path-4.3.0-dist/xml-path-4.3.0.jar"/>
 	<classpathentry kind="lib" path="/Users/rizcube/Desktop/Programs_Downloaded_And_Installed/JARS/slf4j-simple-1.7.30 (1).jar"/>
 	<classpathentry kind="lib" path="/Users/rizcube/Desktop/Programs_Downloaded_And_Installed/JARS/testng-7.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/rizcube/Desktop/Programs_Downloaded_And_Installed/JARS/guice-4.2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
