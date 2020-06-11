@@ -30,7 +30,7 @@ public class DynamicJson {
 		// lecture 35
 	}
 	
-@DataProvider
+@DataProvider(name="BooksData")
 public Object[][] getData() 
 {
 	// array- collection of elements
