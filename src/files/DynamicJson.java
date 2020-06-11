@@ -5,6 +5,7 @@ import io.restassured.path.json.JsonPath;
 
 import static io.restassured.RestAssured.*;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class DynamicJson {
@@ -27,8 +28,15 @@ public class DynamicJson {
 		// parameterize teh API Tests with multiple data sets
 		// How to send static json files (payload) directly into Post Methods of Rest Assured
 		// lecture 35
-		
 	}
+	
+@DataProvider
+public Object[][] getData() 
+{
+	// array- collection of elements
+	// multidimensional array - collection of arrays
+	return new Object[][] {{"XYZ1","098"},{"XYZ2","097"},{"XYZ3","096"}};
+}
 	 
 
 }
