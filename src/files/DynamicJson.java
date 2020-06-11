@@ -25,6 +25,7 @@ public class DynamicJson {
 		// dynamically build json payload with external data inputs
 		// parameterize teh API Tests with multiple data sets
 		// How to send static json files (payload) directly into Post Methods of Rest Assured
+		// lecture 35
 		
 	}
 	 
