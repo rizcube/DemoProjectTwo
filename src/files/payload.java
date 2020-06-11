@@ -52,12 +52,12 @@ public class payload {
 				"";
 	}
 	
-	public static String AddBook() {
+	public static String AddBook(String aisle, String isbn) {
 		String payload ="{\n" + 
 		"\n" + 
 		"\"name\":\"Learn Appium Automation with Java\",\n" + 
-		"\"isbn\":\"abc11\",\n" + 
-		"\"aisle\":\"227\",\n" + 
+		"\"isbn\":\""+aisle+"\",\n" + 
+		"\"aisle\":\""+isbn+"\",\n" + 
 		"\"author\":\"John foe\"\n" + 
 		"}";
 		return payload;
