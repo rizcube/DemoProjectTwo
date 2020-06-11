@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class DynamicJson {
 	
 	
-	@Test
+	@Test(dataProvider="BooksData")
 	public void addBook() {
 		RestAssured.baseURI ="http://216.10.245.166";
 		
