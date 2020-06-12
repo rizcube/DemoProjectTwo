@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-11T17:09:20 BST" name="Default suite" finished-at="2020-06-11T17:09:24 BST" duration-ms="3522">
+  <suite started-at="2020-06-12T09:10:03 BST" name="Default suite" finished-at="2020-06-12T09:10:07 BST" duration-ms="4482">
     <groups>
     </groups>
-    <test started-at="2020-06-11T17:09:20 BST" name="Default test" finished-at="2020-06-11T17:09:24 BST" duration-ms="3522">
+    <test started-at="2020-06-12T09:10:03 BST" name="Default test" finished-at="2020-06-12T09:10:07 BST" duration-ms="4482">
       <class name="files.DynamicJson">
-        <test-method signature="addBook()[pri:0, instance:files.DynamicJson@7880cdf3]" started-at="2020-06-11T17:09:20 BST" name="addBook" finished-at="2020-06-11T17:09:24 BST" duration-ms="3475" status="PASS">
+        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:10:03 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:10:07 BST" duration-ms="3681" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XYZ1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[098]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:10:07 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:10:07 BST" duration-ms="372" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XYZ2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[097]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBook -->
+        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:10:07 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:10:07 BST" duration-ms="359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[XYZ3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[096]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
