@@ -1,27 +1,25 @@
 package files;
 
-import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
-
+import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class DynamicJson {
-	
-	
-	@Test(dataProvider="BooksData")
-	public void addBook(String isbn, String isle) 
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+
+public class StaticJson {
+	@Test
+	public void addBook() throws IOException 
 	{
 		RestAssured.baseURI ="http://216.10.245.166";
 		
 		String response = given().header("Content_Type","application/json")
-		.body(payload.Addbook(isbn, isle))
+		.body(GeneratesStringFromResource("/Users/rizcube/eclipse-workspace/DemoProjectTwo/src/files/AddBookDetails.json"))
 		.when().post("Library/Addbook.php")
 		.then().assertThat().statusCode(200)
 		.extract().response().asString();
@@ -34,15 +32,8 @@ public class DynamicJson {
 		// How to send static json files (payload) directly into Post Methods of Rest Assured
 		// lecture 35
 	}
+	 public static String GeneratesStringFromResource(String path) throws IOException {
+		 return new String(Files.readAllBytes(Paths.get(path)));
+	 }
 	
-@DataProvider(name="BooksData")
-public Object[][] getData() 
-{
-	// array- collection of elements
-	// multidimensional array - collection of arrays
-	return new Object[][] {{"XYZ11","0988"},{"XYZ22","0977"},{"XYZ33","0966"}};
-}
-	
-	 
-
 }
