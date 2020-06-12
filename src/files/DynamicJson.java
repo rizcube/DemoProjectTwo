@@ -17,7 +17,7 @@ public class DynamicJson {
 		RestAssured.baseURI ="http://216.10.245.166";
 		
 		String response = given().header("Content_Type","application/json")
-		.body(payload.AddBook(isbn, isle))
+		.body(payload.Addbook(isbn, isle))
 		.when().post("Library/Addbook.php")
 		.then().assertThat().statusCode(200)
 		.extract().response().asString();
@@ -36,7 +36,7 @@ public Object[][] getData()
 {
 	// array- collection of elements
 	// multidimensional array - collection of arrays
-	return new Object[][] {{"XYZ1","098"},{"XYZ2","097"},{"XYZ3","096"}};
+	return new Object[][] {{"XYZ11","0988"},{"XYZ22","0977"},{"XYZ33","0966"}};
 }
 	 
 

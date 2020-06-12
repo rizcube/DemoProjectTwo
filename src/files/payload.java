@@ -52,7 +52,7 @@ public class payload {
 				"";
 	}
 	
-	public static String AddBook(String aisle, String isbn) {
+	public static String Addbook(String aisle, String isbn) {
 		String payload ="{\n" + 
 		"\n" + 
 		"\"name\":\"Learn Appium Automation with Java\",\n" + 

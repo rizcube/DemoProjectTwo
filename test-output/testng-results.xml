@@ -2,53 +2,53 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-06-12T09:10:03 BST" name="Default suite" finished-at="2020-06-12T09:10:07 BST" duration-ms="4482">
+  <suite started-at="2020-06-12T09:24:07 BST" name="Default suite" finished-at="2020-06-12T09:24:11 BST" duration-ms="3869">
     <groups>
     </groups>
-    <test started-at="2020-06-12T09:10:03 BST" name="Default test" finished-at="2020-06-12T09:10:07 BST" duration-ms="4482">
+    <test started-at="2020-06-12T09:24:07 BST" name="Default test" finished-at="2020-06-12T09:24:11 BST" duration-ms="3869">
       <class name="files.DynamicJson">
-        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:10:03 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:10:07 BST" duration-ms="3681" status="PASS">
+        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:24:08 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:24:11 BST" duration-ms="3048" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[XYZ1]]>
+                <![CDATA[XYZ11]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[098]]>
+                <![CDATA[0988]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:10:07 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:10:07 BST" duration-ms="372" status="PASS">
+        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:24:11 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:24:11 BST" duration-ms="391" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[XYZ2]]>
+                <![CDATA[XYZ22]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[097]]>
+                <![CDATA[0977]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:10:07 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:10:07 BST" duration-ms="359" status="PASS">
+        <test-method signature="addBook(java.lang.String, java.lang.String)[pri:0, instance:files.DynamicJson@2473d930]" started-at="2020-06-12T09:24:11 BST" name="addBook" data-provider="BooksData" finished-at="2020-06-12T09:24:11 BST" duration-ms="369" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[XYZ3]]>
+                <![CDATA[XYZ33]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[096]]>
+                <![CDATA[0966]]>
               </value>
             </param>
           </params>
