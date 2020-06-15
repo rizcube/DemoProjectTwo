@@ -19,6 +19,9 @@ public class SerializeTest {
 	p.setLanguage("French-IN");
 	
 	
+// types is a list so we have to create a list object first
+	p.setTypes(types);
+	
 	Response res = given().queryParam("key", "qaclick")
 	.body()
 	.when().post("/maps/api/place/add/json")
