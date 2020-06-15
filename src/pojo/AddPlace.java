@@ -4,12 +4,12 @@ import java.util.List;
 
 public class AddPlace {
 	
-	private String location;
-	private String accuracy;
+	private Location location;
+	private int accuracy;
 	private String name;
 	private String phone_number;
 	private String address;
-	private String types;
+	private List<String> types;
 	private String website;
 	private String language;
 
