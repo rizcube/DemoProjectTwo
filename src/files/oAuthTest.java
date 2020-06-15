@@ -3,6 +3,7 @@ import static io.restassured.RestAssured.given;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
+import pojo.GetCourse;
 
 public class oAuthTest {
 	
@@ -34,7 +35,7 @@ public class oAuthTest {
 		
 		String response = given().queryParam("access_token", accessToken)
 		.when().log().all()
-		.get("https://rahulshettyacademy.com/getCourse.php").asString();
+		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
 		System.out.println(response);
 		
 	}
