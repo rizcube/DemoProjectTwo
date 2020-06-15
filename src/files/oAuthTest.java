@@ -2,6 +2,7 @@ package files;
 import static io.restassured.RestAssured.given;
 
 import io.restassured.RestAssured;
+import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import pojo.GetCourse;
 
@@ -33,8 +34,8 @@ public class oAuthTest {
 		String accessToken = js.getString("access_token");
 		
 		
-		GetCourse gc = given().queryParam("access_token", accessToken)
-		.when().log().all()
+		GetCourse gc = given().queryParam("access_token", accessToken).expect().defaultParser(Parser.JSON)
+		.when()
 		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
 		//System.out.println(response);
 		
