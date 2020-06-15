@@ -43,8 +43,10 @@ public class SpectBuilderTest {
 	
 	
 	
-	Response res = given().spec(req)
-	.body(p)
+	RequestSpecification res = given().spec(req)
+	.body(p);
+	
+	
 	.when().post("/maps/api/place/add/json")
 	.then().assertThat().statusCode(200).extract().response();
 	
