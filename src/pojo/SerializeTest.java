@@ -4,6 +4,9 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
+
+import java.util.ArrayList;
+import java.util.List;
 public class SerializeTest {
 
 	public static void main(String[] args) {
@@ -20,7 +23,13 @@ public class SerializeTest {
 	
 	
 // types is a list so we have to create a list object first
-	p.setTypes(types);
+	List<String> myList = new ArrayList<String>();
+	myList.add("shoe park");
+	myList.add("shop");
+	p.setTypes(myList);
+	
+	
+	
 	
 	Response res = given().queryParam("key", "qaclick")
 	.body()
