@@ -8,6 +8,7 @@ import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import pojo.Api;
 import pojo.GetCourse;
+import pojo.WebAutomation;
 
 public class oAuthTest {
 	
@@ -15,7 +16,7 @@ public class oAuthTest {
 	{
 		// first hit https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php&state=abcd			
 					
-		String url = "https://rahulshettyacademy.com/getCourse.php?state=abcd&code=4%2F0wHPAk7GnZ0n7PcP__5yxd--MIrjaM7wpnSguje4fUVaRmzegw8HnkH8VL8d7a62Ige30Csr-p5IjPfw4YaNfT4&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
+		String url = "https://rahulshettyacademy.com/getCourse.php?state=abcd&code=4%2F0wE0OOndsvK0X5cloh4yXEN_sW6qFKoUONN1wwkB-1T_hgtkEH_4_te7PCtzFQOgO4yQWLEp632H3yIWPk6h-4c&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
 		
 		String partialcode =url.split("code=")[1];
 		String code = partialcode.split("&scope")[0];
@@ -57,6 +58,18 @@ public class oAuthTest {
 			}
 			
 		}
+		
+		
+		List<WebAutomation> web = gc.getCourses().getWebAutomation();
+		System.out.println(web);
+		
+		for (int i=0; i<web.size(); i++) 
+		{
+			System.out.println(web.get(i).getCourseTitle());
+			System.out.println(web.get(i).getPrice());
+		}
+		
+		
 		
 	}
 
