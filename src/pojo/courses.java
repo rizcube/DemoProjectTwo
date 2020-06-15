@@ -7,10 +7,10 @@ public class Courses {
 	private Api api;
 	private Mobile mobile;
 	
-	public WebAutomation getWebAutomation() {
+	public List<WebAutomation> getWebAutomation() {
 		return webAutomation;
 	}
-	public void setWebAutomation(WebAutomation webAutomation) {
+	public void setWebAutomation(List<WebAutomation> webAutomation) {
 		this.webAutomation = webAutomation;
 	}
 	public Api getApi() {
