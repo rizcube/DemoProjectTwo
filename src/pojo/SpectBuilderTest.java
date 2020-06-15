@@ -2,6 +2,7 @@ package pojo;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -42,15 +43,15 @@ public class SpectBuilderTest {
 	.setContentType(ContentType.JSON).build();
 	
 	
-	
+	new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON)
 	RequestSpecification res = given().spec(req)
 	.body(p);
 	
 	
-	.when().post("/maps/api/place/add/json")
+	Response response = res.when().post("/maps/api/place/add/json")
 	.then().assertThat().statusCode(200).extract().response();
 	
-	String responseString = res.asString();
+	String responseString = response.asString();
 	System.out.println(responseString);
 	}
 
