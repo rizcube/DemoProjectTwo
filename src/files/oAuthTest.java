@@ -33,10 +33,11 @@ public class oAuthTest {
 		String accessToken = js.getString("access_token");
 		
 		
-		String response = given().queryParam("access_token", accessToken)
+		GetCourse gc = given().queryParam("access_token", accessToken)
 		.when().log().all()
 		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
-		System.out.println(response);
+		//System.out.println(response);
+		
 		
 	}
 
