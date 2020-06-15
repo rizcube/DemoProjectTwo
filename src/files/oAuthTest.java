@@ -1,9 +1,12 @@
 package files;
 import static io.restassured.RestAssured.given;
 
+import java.util.List;
+
 import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
+import pojo.Api;
 import pojo.GetCourse;
 
 public class oAuthTest {
@@ -12,7 +15,7 @@ public class oAuthTest {
 	{
 		// first hit https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php&state=abcd			
 					
-		String url = "https://rahulshettyacademy.com/getCourse.php?state=abcd&code=4%2F0wHMuxoSy-QT2LgMIAJ6BDJYoO4Q00noZQ6dUhqgxzI4vWXFJ-TXQOAjV2SC4QY87nAf4xcdeS1mjQw-yiCDTzY&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
+		String url = "https://rahulshettyacademy.com/getCourse.php?state=abcd&code=4%2F0wHPAk7GnZ0n7PcP__5yxd--MIrjaM7wpnSguje4fUVaRmzegw8HnkH8VL8d7a62Ige30Csr-p5IjPfw4YaNfT4&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
 		
 		String partialcode =url.split("code=")[1];
 		String code = partialcode.split("&scope")[0];
@@ -40,8 +43,20 @@ public class oAuthTest {
 		//System.out.println(response);
 		System.out.println(gc.getLinkedIn());
 		System.out.println(gc.getInstructor());
-		
+		// this return only the course on 1st index, how to find course if we don't know the index of the course.
 		gc.getCourses().getApi().get(1).getCourseTitle();
+		
+		List<Api> apiCourses = gc.getCourses().getApi();
+		System.out.println(apiCourses);
+		
+		for(int i=0; i<apiCourses.size();i++) {
+			if (apiCourses.get(i).getCourseTitle().equalsIgnoreCase("SoapUI Webservices testing")) 
+			{
+				System.out.println(apiCourses.get(i).getCourseTitle());
+				System.out.println(apiCourses.get(i).getPrice());
+			}
+			
+		}
 		
 	}
 
