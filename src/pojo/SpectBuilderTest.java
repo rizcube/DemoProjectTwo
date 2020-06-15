@@ -1,6 +1,7 @@
 package pojo;
 
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
@@ -31,6 +32,8 @@ public class SpectBuilderTest {
 	Location l= new Location();
 	l.setLng(-38.383494);
 	l.setLng(33.427362);
+	
+	new RequestSpecBuilder()
 	
 	p.setLocation(l);
 	
