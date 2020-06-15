@@ -6,6 +6,7 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
 
 import static io.restassured.RestAssured.given;
 
@@ -43,13 +44,13 @@ public class SpectBuilderTest {
 	.setContentType(ContentType.JSON).build();
 	
 	
-	new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON)
+	ResponseSpecification resspec = new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 	RequestSpecification res = given().spec(req)
 	.body(p);
 	
 	
 	Response response = res.when().post("/maps/api/place/add/json")
-	.then().assertThat().statusCode(200).extract().response();
+	.then().spec(resspec).extract().response();
 	
 	String responseString = response.asString();
 	System.out.println(responseString);
