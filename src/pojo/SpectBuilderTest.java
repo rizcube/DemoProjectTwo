@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 import static io.restassured.RestAssured.given;
 
@@ -34,7 +35,7 @@ public class SpectBuilderTest {
 	l.setLng(-38.383494);
 	l.setLng(33.427362);
 	// set is used for setting parameters
-	new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
+	RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
 	.setContentType(ContentType.JSON).build();
 	
 	p.setLocation(l);
