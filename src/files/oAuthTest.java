@@ -12,7 +12,7 @@ public class oAuthTest {
 	{
 		// first hit https://accounts.google.com/o/oauth2/v2/auth?scope=https://www.googleapis.com/auth/userinfo.email&auth_url=https://accounts.google.com/o/oauth2/v2/auth&client_id=692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com&response_type=code&redirect_uri=https://rahulshettyacademy.com/getCourse.php&state=abcd			
 					
-		String url = "https://rahulshettyacademy.com/getCourse.php?state=abcd&code=4%2F0wGYWO4E8DqBgeIYnSqVPoPmJ2PuGn9kGqQo-IHPCznOGJdrqs8Xoclsn0dD6cSmBTWFMMNB3jv45gEtSViCNgc&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
+		String url = "https://rahulshettyacademy.com/getCourse.php?state=abcd&code=4%2F0wHMuxoSy-QT2LgMIAJ6BDJYoO4Q00noZQ6dUhqgxzI4vWXFJ-TXQOAjV2SC4QY87nAf4xcdeS1mjQw-yiCDTzY&scope=email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none#";
 		
 		String partialcode =url.split("code=")[1];
 		String code = partialcode.split("&scope")[0];
@@ -38,7 +38,10 @@ public class oAuthTest {
 		.when()
 		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
 		//System.out.println(response);
+		System.out.println(gc.getLinkedIn());
+		System.out.println(gc.getInstructor());
 		
+		gc.getCourses().getApi().get(1).getCourseTitle();
 		
 	}
 
