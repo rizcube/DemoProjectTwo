@@ -28,11 +28,14 @@ public class SerializeTest {
 	myList.add("shop");
 	p.setTypes(myList);
 	
+	Location l= new Location();
+	l.setLng(-38.383494);
+	l.setLng(33.427362);
 	
-	
+	p.setLocation(l);
 	
 	Response res = given().queryParam("key", "qaclick")
-	.body()
+	.body(p)
 	.when().post("/maps/api/place/add/json")
 	.then().assertThat().statusCode(200).extract().response();
 	
