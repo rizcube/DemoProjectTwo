@@ -34,13 +34,16 @@ public class SpectBuilderTest {
 	Location l= new Location();
 	l.setLng(-38.383494);
 	l.setLng(33.427362);
+	
+	p.setLocation(l);
+	
 	// set is used for setting parameters
 	RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
 	.setContentType(ContentType.JSON).build();
 	
-	p.setLocation(l);
 	
-	Response res = given().log().all().queryParam("key", "qaclick")
+	
+	Response res = given().spec(req)
 	.body(p)
 	.when().post("/maps/api/place/add/json")
 	.then().assertThat().statusCode(200).extract().response();
