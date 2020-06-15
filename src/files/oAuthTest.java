@@ -33,7 +33,7 @@ public class oAuthTest {
 		JsonPath js = new JsonPath(accessTokenResponse);
 		String accessToken = js.getString("access_token");
 		
-		
+		// .expect().defaultParser(Parser.JSON) can be avoided if the response header is the Content-Type is application-json 
 		GetCourse gc = given().queryParam("access_token", accessToken).expect().defaultParser(Parser.JSON)
 		.when()
 		.get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
