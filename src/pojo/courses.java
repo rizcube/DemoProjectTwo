@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Courses {
 	private List<WebAutomation> webAutomation;
-	private Api api;
-	private Mobile mobile;
+	private List<Api> api;
+	private List<Mobile> mobile;
 	
 	public List<WebAutomation> getWebAutomation() {
 		return webAutomation;
@@ -13,18 +13,20 @@ public class Courses {
 	public void setWebAutomation(List<WebAutomation> webAutomation) {
 		this.webAutomation = webAutomation;
 	}
-	public Api getApi() {
+	public List<Api> getApi() {
 		return api;
 	}
-	public void setApi(Api api) {
+	public void setApi(List<Api> api) {
 		this.api = api;
 	}
-	public Mobile getMobile() {
+	public List<Mobile> getMobile() {
 		return mobile;
 	}
-	public void setMobile(Mobile mobile) {
+	public void setMobile(List<Mobile> mobile) {
 		this.mobile = mobile;
 	}
+	
+	
 	
 
 }
