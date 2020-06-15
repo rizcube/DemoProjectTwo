@@ -1,7 +1,9 @@
 package pojo;
 
+import java.util.List;
+
 public class Courses {
-	private WebAutomation webAutomation;
+	private List<WebAutomation> webAutomation;
 	private Api api;
 	private Mobile mobile;
 	
