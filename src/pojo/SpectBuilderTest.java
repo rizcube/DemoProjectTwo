@@ -7,7 +7,7 @@ import static io.restassured.RestAssured.given;
 
 import java.util.ArrayList;
 import java.util.List;
-public class SerializeTest {
+public class SpectBuilderTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
