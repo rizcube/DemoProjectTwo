@@ -2,6 +2,7 @@ package pojo;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
@@ -32,8 +33,9 @@ public class SpectBuilderTest {
 	Location l= new Location();
 	l.setLng(-38.383494);
 	l.setLng(33.427362);
-	
-	new RequestSpecBuilder()
+	// set is used for setting parameters
+	new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
+	.setContentType(ContentType.JSON).build();
 	
 	p.setLocation(l);
 	
