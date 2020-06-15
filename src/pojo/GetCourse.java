@@ -2,12 +2,12 @@ package pojo;
 
 public class GetCourse {
 
-	String url;
-	String services;
-	String expertise;
-	String courses;
-	String instructor;
-	String linkedIn;
+	private String url;
+	private String services;
+	private String expertise;
+	private String courses;
+	private String instructor;
+	private String linkedIn;
 	
 	
 }
