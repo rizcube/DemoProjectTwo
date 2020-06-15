@@ -11,6 +11,12 @@ public class SerializeTest {
 	RestAssured.baseURI = "https://rahulshettyacademy.com";
 	
 	AddPlace p = new AddPlace();
+	p.setAccuracy(50);
+	p.setName("Princess Castle 3");
+	p.setPhone_number("(+91) 983 893 3937");
+	p.setAddress("Spiritual Landing place");
+	p.setWebsite("https://www.google.com");
+	p.setLanguage("French-IN");
 	
 	
 	Response res = given().queryParam("key", "qaclick")
